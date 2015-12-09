@@ -9,7 +9,7 @@ A UIImageView that allows for animations between UIViewContentModes through the 
 ![Animation Image](https://github.com/instilio/INSImageView/raw/master/Example/ExampleAnimation.gif)
 
 ## Compatibility
-Tested with iOS8 and iOS9
+Tested with iOS8 and iOS9 using Swift
 
 ## Usage
 ```swift
