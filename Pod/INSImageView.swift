@@ -25,6 +25,10 @@ public class INSImageView: UIImageView {
     
     // MARK: - Initializers
     
+    public convenience init() {
+        self.init(image: nil, highlightedImage: nil)
+    }
+    
     public override convenience init(image: UIImage?) {
         self.init(image: image, highlightedImage: nil)
     }
