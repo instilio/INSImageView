@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let imageView = PBImageView(image: UIImage(named: "pineapple"))
+    private let imageView = INSImageView(image: UIImage(named: "pineapple"))
     private let contentModeLabel = UILabel()
     private var contentModeIndex = 0;
     private let contentModes = [

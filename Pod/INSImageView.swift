@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PBImageView: UIImageView {
+class INSImageView: UIImageView {
     
     // MARK: - Public Properties
     
