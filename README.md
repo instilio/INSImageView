@@ -10,7 +10,7 @@ A UIImageView that allows for animations between UIViewContentModes through the 
 Tested with iOS8 and iOS9
 
 ## Usage
-```
+```swift
 imageView.contentMode = .ScaleAspectFit
 
 UIView.animateWithDuration(1,
@@ -18,6 +18,15 @@ UIView.animateWithDuration(1,
       self.imageView.contentMode = .ScaleAspectFill
     }
 )
+```
+
+## Installation
+
+INSImageView is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "INSImageView"
 ```
 
 ## Contact
