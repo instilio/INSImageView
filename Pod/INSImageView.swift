@@ -7,7 +7,7 @@
 
 import UIKit
 
-class INSImageView: UIImageView {
+public class INSImageView: UIImageView {
     
     // MARK: - Public Properties
     
@@ -25,27 +25,27 @@ class INSImageView: UIImageView {
     
     // MARK: - Initializers
     
-    override convenience init(image: UIImage?) {
+    public override convenience init(image: UIImage?) {
         self.init(image: image, highlightedImage: nil)
     }
     
-    override init(image: UIImage?, highlightedImage: UIImage?) {
+    public override init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
         addSubview(imageView)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - When to Relayout
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         layoutImageView()
     }
     
-    override var contentMode: UIViewContentMode {
+    public override var contentMode: UIViewContentMode {
         didSet {
             layoutImageView()
         }
@@ -245,7 +245,7 @@ class INSImageView: UIImageView {
     
     // MARK: - Forwarding (Swift doesn't support forwardInvocation :c)
     
-    override var image: UIImage? {
+    public override var image: UIImage? {
         get {
             return nil
         }
@@ -254,7 +254,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var highlightedImage: UIImage? {
+    public override var highlightedImage: UIImage? {
         get {
             return imageView.highlightedImage
         }
@@ -263,7 +263,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var animationImages: [UIImage]? {
+    public override var animationImages: [UIImage]? {
         get {
             return imageView.animationImages
         }
@@ -272,7 +272,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var highlightedAnimationImages: [UIImage]? {
+    public override var highlightedAnimationImages: [UIImage]? {
         get {
             return imageView.highlightedAnimationImages
         }
@@ -281,7 +281,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var animationDuration: NSTimeInterval {
+    public override var animationDuration: NSTimeInterval {
         get {
             return imageView.animationDuration
         }
@@ -290,7 +290,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var animationRepeatCount: Int {
+    public override var animationRepeatCount: Int {
         get {
             return imageView.animationRepeatCount
         }
@@ -299,7 +299,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var highlighted: Bool {
+    public override var highlighted: Bool {
         get {
             return imageView.highlighted
         }
@@ -308,7 +308,7 @@ class INSImageView: UIImageView {
         }
     }
     
-    override var tintColor: UIColor! {
+    public override var tintColor: UIColor! {
         get {
             return imageView.tintColor
         }
@@ -317,15 +317,15 @@ class INSImageView: UIImageView {
         }
     }
     
-    override func startAnimating() {
+    public override func startAnimating() {
         imageView.startAnimating()
     }
     
-    override func stopAnimating() {
+    public override func stopAnimating() {
         imageView.stopAnimating()
     }
     
-    override func isAnimating() -> Bool {
+    public override func isAnimating() -> Bool {
         return imageView.isAnimating()
     }
 }
