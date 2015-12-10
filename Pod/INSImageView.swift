@@ -25,21 +25,27 @@ public class INSImageView: UIImageView {
     
     // MARK: - Initializers
     
-    public convenience init() {
-        self.init(image: nil, highlightedImage: nil)
+    public init() {
+        super.init(image: nil, highlightedImage: nil)
+        setup()
     }
     
-    public override convenience init(image: UIImage?) {
-        self.init(image: image, highlightedImage: nil)
+    public override init(image: UIImage?) {
+        super.init(image: image, highlightedImage: nil)
+        setup()
     }
     
     public override init(image: UIImage?, highlightedImage: UIImage?) {
         super.init(image: image, highlightedImage: highlightedImage)
-        addSubview(imageView)
+        setup()
     }
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setup() {
+        addSubview(imageView)
     }
     
     // MARK: - When to Relayout
