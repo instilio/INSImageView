@@ -35,4 +35,4 @@ pod "INSImageView"
 Patrick, patbdev@gmail.com
 
 ## License
-PBImageView is available under the MIT license. See the LICENSE file for more info.
+INSImageView is available under the MIT license. See the LICENSE file for more info.
