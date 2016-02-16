@@ -294,8 +294,13 @@ public class INSImageView: UIImageView {
     
     // MARK: - Forwarding (Swift doesn't support forwardInvocation :c)
     
+    var superViewAsk = false
     public override var image: UIImage? {
         get {
+            if superViewAsk {
+                superViewAsk = true
+                return nil
+            }
             return imageView.image
         }
         set {
