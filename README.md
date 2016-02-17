@@ -13,6 +13,7 @@ Tested with iOS8 and iOS9 using Swift
 
 ## Usage
 ```swift
+let imageView = INSImageView(...)
 imageView.contentMode = .ScaleAspectFit
 
 UIView.animateWithDuration(1,
@@ -20,6 +21,12 @@ UIView.animateWithDuration(1,
       self.imageView.contentMode = .ScaleAspectFill
     }
 )
+```
+
+## Caveat
+Due to the way INSImageView is implemented, the `image` property getter needs to be NOOPed. If you're wishing to get the original image please use `originalImage`.
+```swift
+let image = imageView.originalImage
 ```
 
 ## Installation
@@ -30,6 +37,9 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "INSImageView"
 ```
+
+## TODO
+- [ ] Tests (including creating INSImageView from code/storyboard)
 
 ## Contact
 Patrick, patbdev@gmail.com
