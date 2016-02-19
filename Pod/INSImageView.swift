@@ -66,60 +66,20 @@ public class INSImageView: UIImageView {
     
     private func layoutImageView() {
         
-        let imageView = self.imageView
-        
         switch contentMode {
-            
-        case .ScaleAspectFit:
-            layoutAspectFit(imageView)
-            break;
-            
-        case .ScaleAspectFill:
-            layoutAspectFill(imageView)
-            break;
-            
-        case .ScaleToFill:
-            layoutFill(imageView)
-            break;
-            
-        case .Redraw:
-            break;
-            
-        case .Center:
-            layoutCenter(imageView)
-            break;
-            
-        case .Top:
-            layoutTop(imageView)
-            break;
-            
-        case .Bottom:
-            layoutBottom(imageView)
-            break;
-            
-        case .Left:
-            layoutLeft(imageView)
-            break;
-            
-        case .Right:
-            layoutRight(imageView)
-            break;
-            
-        case .TopLeft:
-            layoutTopLeft(imageView)
-            break;
-            
-        case .TopRight:
-            layoutTopRight(imageView)
-            break;
-            
-        case .BottomLeft:
-            layoutBottomLeft(imageView)
-            break;
-            
-        case .BottomRight:
-            layoutBottomRight(imageView)
-            break;
+        case .ScaleAspectFit:  layoutAspectFit(imageView)
+        case .ScaleAspectFill: layoutAspectFill(imageView)
+        case .ScaleToFill:     layoutFill(imageView)
+        case .Redraw:          break;
+        case .Center:          layoutCenter(imageView)
+        case .Top:             layoutTop(imageView)
+        case .Bottom:          layoutBottom(imageView)
+        case .Left:            layoutLeft(imageView)
+        case .Right:           layoutRight(imageView)
+        case .TopLeft:         layoutTopLeft(imageView)
+        case .TopRight:        layoutTopRight(imageView)
+        case .BottomLeft:      layoutBottomLeft(imageView)
+        case .BottomRight:     layoutBottomRight(imageView)
         }
     }
     
