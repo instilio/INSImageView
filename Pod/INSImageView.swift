@@ -54,9 +54,7 @@ public class INSImageView: UIImageView {
     }
     
     public override var contentMode: UIViewContentMode {
-        didSet {
-            layoutImageView()
-        }
+        didSet { layoutImageView() }
     }
     
     // MARK: - Manipulating Private imageView
@@ -224,57 +222,33 @@ public class INSImageView: UIImageView {
     }
     
     public override var animationImages: [UIImage]? {
-        get {
-            return imageView.animationImages
-        }
-        set {
-            imageView.animationImages = newValue
-        }
+        get { return imageView.animationImages }
+        set { imageView.animationImages = newValue }
     }
     
     public override var highlightedAnimationImages: [UIImage]? {
-        get {
-            return imageView.highlightedAnimationImages
-        }
-        set {
-            imageView.highlightedAnimationImages = newValue
-        }
+        get { return imageView.highlightedAnimationImages }
+        set { imageView.highlightedAnimationImages = newValue }
     }
     
     public override var animationDuration: NSTimeInterval {
-        get {
-            return imageView.animationDuration
-        }
-        set {
-            imageView.animationDuration = newValue
-        }
+        get { return imageView.animationDuration }
+        set { imageView.animationDuration = newValue }
     }
     
     public override var animationRepeatCount: Int {
-        get {
-            return imageView.animationRepeatCount
-        }
-        set {
-            imageView.animationRepeatCount = newValue
-        }
+        get { return imageView.animationRepeatCount }
+        set { imageView.animationRepeatCount = newValue }
     }
     
     public override var highlighted: Bool {
-        get {
-            return imageView.highlighted
-        }
-        set {
-            imageView.highlighted = newValue
-        }
+        get { return imageView.highlighted }
+        set { imageView.highlighted = newValue }
     }
     
     public override var tintColor: UIColor! {
-        get {
-            return imageView.tintColor
-        }
-        set {
-            imageView.tintColor = newValue
-        }
+        get { return imageView.tintColor }
+        set { imageView.tintColor = newValue }
     }
     
     public override func startAnimating() {
