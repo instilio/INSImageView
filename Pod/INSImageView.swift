@@ -11,13 +11,10 @@ public class INSImageView: UIImageView {
     
     // MARK: - Public Properties
     
-    // Use this to access the intended 'image' property
-    // Due to the way PBImageView is implemented, the 'image' property will always return nil.
-    var originalImage: UIImage? {
-        get {
-            return imageView.image
-        }
-    }
+    // Use this to access the intended 'image' and `highlightedImage` properties.
+    // Due to the way INSImageView is implemented, the 'image' and `highlightedImage` properties will always return nil.
+    var originalImage: UIImage?            { return imageView.image }
+    var originalHighlightedImage: UIImage? { return imageView.highlightedImage }
     
     // MARK: - Private Properties
     
@@ -217,21 +214,13 @@ public class INSImageView: UIImageView {
     // MARK: - Forwarding (Swift doesn't support forwardInvocation :c)
     
     public override var image: UIImage? {
-        get {
-            return nil
-        }
-        set {
-            imageView.image = newValue
-        }
+        get { return nil }
+        set { imageView.image = newValue }
     }
     
     public override var highlightedImage: UIImage? {
-        get {
-            return imageView.highlightedImage
-        }
-        set {
-            imageView.highlightedImage = newValue
-        }
+        get { return nil }
+        set { imageView.highlightedImage = newValue }
     }
     
     public override var animationImages: [UIImage]? {
