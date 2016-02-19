@@ -62,19 +62,19 @@ public class INSImageView: UIImageView {
     private func layoutImageView() {
         
         switch contentMode {
-        case .ScaleAspectFit:  layoutAspectFit(imageView)
-        case .ScaleAspectFill: layoutAspectFill(imageView)
-        case .ScaleToFill:     layoutFill(imageView)
+        case .ScaleAspectFit:  layoutAspectFit()
+        case .ScaleAspectFill: layoutAspectFill()
+        case .ScaleToFill:     layoutFill()
         case .Redraw:          break;
-        case .Center:          layoutCenter(imageView)
-        case .Top:             layoutTop(imageView)
-        case .Bottom:          layoutBottom(imageView)
-        case .Left:            layoutLeft(imageView)
-        case .Right:           layoutRight(imageView)
-        case .TopLeft:         layoutTopLeft(imageView)
-        case .TopRight:        layoutTopRight(imageView)
-        case .BottomLeft:      layoutBottomLeft(imageView)
-        case .BottomRight:     layoutBottomRight(imageView)
+        case .Center:          layoutCenter()
+        case .Top:             layoutTop()
+        case .Bottom:          layoutBottom()
+        case .Left:            layoutLeft()
+        case .Right:           layoutRight()
+        case .TopLeft:         layoutTopLeft()
+        case .TopRight:        layoutTopRight()
+        case .BottomLeft:      layoutBottomLeft()
+        case .BottomRight:     layoutBottomRight()
         }
     }
     
@@ -86,7 +86,7 @@ public class INSImageView: UIImageView {
         return image.size.height / bounds.size.height
     }
     
-    private func layoutAspectFit(imageView: UIImageView) {
+    private func layoutAspectFit() {
         
         let image = imageView.image!
         let widthRatio = imageToBoundsWidthRatio(image)
@@ -103,7 +103,7 @@ public class INSImageView: UIImageView {
         centerImageView(imageView)
     }
     
-    private func layoutAspectFill(imageView: UIImageView) {
+    private func layoutAspectFill() {
         
         let image = imageView.image!
         let widthRatio = imageToBoundsWidthRatio(image)
@@ -120,76 +120,66 @@ public class INSImageView: UIImageView {
         centerImageView(imageView)
     }
     
-    private func layoutFill(imageView: UIImageView) {
+    private func layoutFill() {
         let size = CGSize(width: bounds.size.width, height: bounds.size.height)
         imageViewBoundsToSize(imageView, size: size)
     }
     
-    private func layoutCenter(imageView:UIImageView) {
+    private func layoutCenter() {
         imageViewBoundsToImageSize(imageView)
         centerImageView(imageView)
     }
     
-    private func layoutTop(imageView: UIImageView) {
+    private func layoutTop() {
         imageViewBoundsToImageSize(imageView)
         let point = CGPoint(x: bounds.size.width / 2, y: imageView.image!.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutBottom(imageView: UIImageView) {
+    private func layoutBottom() {
         imageViewBoundsToImageSize(imageView)
         let point = CGPoint(x: bounds.size.width / 2, y: bounds.size.height - imageView.image!.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutLeft(imageView: UIImageView) {
+    private func layoutLeft() {
         imageViewBoundsToImageSize(imageView)
         let point = CGPoint(x: imageView.image!.size.width / 2, y: bounds.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutRight(imageView: UIImageView) {
+    private func layoutRight() {
         imageViewBoundsToImageSize(imageView)
         let point = CGPoint(x: bounds.size.width - imageView.image!.size.width / 2, y: bounds.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutTopLeft(imageView: UIImageView) {
+    private func layoutTopLeft() {
         imageViewBoundsToImageSize(imageView)
         let image = imageView.image!
         let point = CGPoint(x: image.size.width / 2, y: image.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutTopRight(imageView: UIImageView) {
+    private func layoutTopRight() {
         imageViewBoundsToImageSize(imageView)
         let image = imageView.image!
         let point = CGPoint(x: bounds.size.width - image.size.width / 2, y: image.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutBottomLeft(imageView: UIImageView) {
+    private func layoutBottomLeft() {
         imageViewBoundsToImageSize(imageView)
         let image = imageView.image!
         let point = CGPoint(x: image.size.width / 2, y: bounds.size.height - image.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
     }
     
-    private func layoutBottomRight(imageView: UIImageView) {
+    private func layoutBottomRight() {
         imageViewBoundsToImageSize(imageView)
         let image = imageView.image!
         let point = CGPoint(x: bounds.size.width - image.size.width / 2, y: bounds.size.height - image.size.height / 2)
         centerImageViewToPoint(imageView, point: point)
-    }
-    
-    private func updateImageViewToLeft(imageView: UIImageView) {
-        imageViewBoundsToImageSize(imageView)
-        centerImageViewToPoint(imageView, point: CGPoint(x: (image?.size.width)! / 2, y: bounds.size.height / 2))
-    }
-    
-    private func updateImageViewToRight(imageView: UIImageView) {
-        imageViewBoundsToImageSize(imageView)
-        centerImageViewToPoint(imageView, point: CGPoint(x: bounds.size.width - (image?.size.width)! / 2, y: bounds.size.height / 2))
     }
     
     private func centerImageViewToPoint(imageView: UIImageView, point: CGPoint) {
