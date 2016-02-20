@@ -24,9 +24,10 @@ UIView.animateWithDuration(1,
 ```
 
 ## Caveat
-Due to the way INSImageView is implemented, the `image` property getter needs to be NOOPed. If you're wishing to get the original image please use `originalImage`.
+Due to the way INSImageView is implemented, the `image` and `highlightedImage` property getters need to be NOOPed. If you're wishing to get the original image please use `originalImage` or `originalHighlightedImage` respectively.
 ```swift
 let image = imageView.originalImage
+let highlightedImage = imageView.originalHighlightedImage
 ```
 
 ## Installation
