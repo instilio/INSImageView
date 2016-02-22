@@ -13,8 +13,8 @@ public class INSImageView: UIImageView {
     
     // Use this to access the intended 'image' and `highlightedImage` properties.
     // Due to the way INSImageView is implemented, the 'image' and `highlightedImage` properties will always return nil.
-    var originalImage: UIImage?            { return imageView.image }
-    var originalHighlightedImage: UIImage? { return imageView.highlightedImage }
+    public var originalImage: UIImage?            { return imageView.image }
+    public var originalHighlightedImage: UIImage? { return imageView.highlightedImage }
     
     // MARK: - Private Properties
     
