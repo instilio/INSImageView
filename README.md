@@ -1,3 +1,9 @@
+# MUST READ
+
+Development on this project has moved to https://github.com/patrickbdev/PBImageView under the new name PBImageView.
+
+PBImageView supports Swift 3.0.
+
 # INSImageView
 [![Version](https://img.shields.io/cocoapods/v/INSImageView.svg?style=flat)](http://cocoapods.org/pods/INSImageView)
 [![License](https://img.shields.io/cocoapods/l/INSImageView.svg?style=flat)](http://cocoapods.org/pods/INSImageView)
