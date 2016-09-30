@@ -10,4 +10,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform 	 = :ios
   s.ios.deployment_target = "8.0"
+  s.deprecated = true
+  s.deprecated_in_favor_of = 'PBImageView'
 end
